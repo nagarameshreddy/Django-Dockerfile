@@ -1,2 +1,2 @@
-# prj1
+# Django Docker file
 Dockerfile for Django sample project
