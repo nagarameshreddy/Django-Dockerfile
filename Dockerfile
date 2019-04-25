@@ -7,6 +7,6 @@ RUN pip install --upgrade pip
 RUN pip install -U setuptools
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-#RUN  python /app/manage.py collectstatic --no-input && python /app/manage.py makemigrations app1 && python /app/manage.py migrate
+RUN  python /app/manage.py collectstatic --no-input && python /app/manage.py makemigrations && python /app/manage.py migrate
 EXPOSE 80
 ENTRYPOINT ["python", "/app/manage.py", "runserver", "0.0.0.0:80"]
